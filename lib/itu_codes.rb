@@ -52,6 +52,7 @@ module ItuCodes
         [*v].include? name
       end || {}
 
+      matching = matching.is_a?(Array) ? Hash[matching] : matching
       returner = matching.keys
 
       if returner.size <= 1
